@@ -1,8 +1,8 @@
 class Quote{
   late String textOfProperty;
-  late int numberOfProperty;
+  late String numberOfProperty;
 
-  Quote(String t, int n){
+  Quote(String t, String n){
     textOfProperty = t;
     numberOfProperty = n;
   }
