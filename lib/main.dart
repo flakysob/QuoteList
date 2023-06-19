@@ -1,5 +1,5 @@
 import 'dart:html';
-
+import 'quote.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
@@ -15,8 +15,13 @@ class QuoteList extends StatefulWidget {
 
 class _QuoteListState extends State<QuoteList> {
 
-  List<String> quotes = [
-    "aaaa","bbbb","cccc","dddd","eeee","ffff","gggg","hhhh","iiii"
+  List<Quote> quotes = [
+    Quote("aa", 1),
+    Quote("bb", 2),
+    Quote("cc", 3),
+    Quote("dd", 4),
+    Quote("ee", 5),
+
   ];
 
   @override
@@ -29,7 +34,7 @@ class _QuoteListState extends State<QuoteList> {
         title: Text("quotes"),
       ),
       body: Column(
-        children: quotes.map((quote) => Text(quote)).toList(),
+        children: quotes.map((quote) => Text("${quote.numberOfProperty} - ${quote.textOfProperty}")).toList(),
       ),
     );
   }
